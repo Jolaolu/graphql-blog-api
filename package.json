@@ -1,0 +1,7 @@
+{
+  "name": "graphql-blog",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "jola_adebayo <adebayoanjola@gmail.com>",
+  "license": "MIT"
+}
