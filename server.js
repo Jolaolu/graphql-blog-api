@@ -5,7 +5,7 @@ const resolvers = require('./src/resolvers/resolvers')
 const models = require('./src/models')
 
 const server = new ApolloServer( {
-playground: true,
+  playground: true,
   typeDefs,
   resolvers,
   context: { models }

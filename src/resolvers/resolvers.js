@@ -3,13 +3,13 @@ const bcrypt = require( 'bcryptjs' )
 const resolvers = {
     Query: {
         async user ( root, { id }, { models } ) {
-            return models.User.findById( id )
+            return models.User.findByPk( id )
         },
         async allPosts ( root, args, { models } ) {
             return models.Post.findAll()
         },
         async post ( root, { id }, { models } ) {
-            return models.Post.findById( id )
+            return models.Post.findByPk( id )
         }
     },
     Mutation: {
