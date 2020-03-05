@@ -1,8 +1,8 @@
 
 const { ApolloServer } = require('apollo-server')
-const typeDefs = require('./schema')
-const resolvers = require('./resolvers')
-const models = require('../models')
+const typeDefs = require('./src/schema/schema')
+const resolvers = require('./src/resolvers/resolvers')
+const models = require('./src/models')
 
 const server = new ApolloServer( {
 playground: true,
@@ -13,4 +13,6 @@ playground: true,
 
 server
   .listen()
-  .then(({ url }) => console.log('Server is running on localhost:4000'))
+    .then( ( { url } ) => console.log( 'Server is running on localhost:4000' ) )
+  
+
