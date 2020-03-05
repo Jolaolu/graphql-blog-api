@@ -5,14 +5,19 @@
   "author": "jola_adebayo <adebayoanjola@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "migrate": " sequelize db:migrate",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server.js --exec babel-node -e js"
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "graphql": "^14.6.0",
     "graphql-tools": "^4.0.7",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
     "sequelize": "^5.21.5",
     "sequelize-cli": "^5.5.1",
