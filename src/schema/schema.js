@@ -1,4 +1,4 @@
-const { gql } = require( 'apollo-server' )
+const { gql } = require('apollo-server')
 // const { makeExecutableSchema } = require( 'graphql-tools' )
 
 const typeDefs = gql`
@@ -9,11 +9,9 @@ const typeDefs = gql`
         posts: [Post]!
       }
 
-      type NewUser {
+      type AuthPayload {
           token: String!
-          id: ID!
-          email: String!
-          name: String!
+          user: User!
       }
 
     type Post {
@@ -33,8 +31,8 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        createUser(name: String!, email: String!, password: String!): NewUser!
-        login (email: String!, password: String!): User!
+        createUser(name: String!, email: String!, password: String!): AuthPayload!
+        login (email: String!, password: String!): AuthPayload!
         createPost(
           userId: Int!
           title: String!
