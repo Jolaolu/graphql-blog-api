@@ -6,7 +6,7 @@ const resolvers = require('./resolvers/resolvers')
 
 require('dotenv').config()
 
-const { JWT_SECRET } = process.env
+const { JWT_SECRET, PORT } = process.env
 
 const getUser = token => {
   try {
@@ -30,7 +30,7 @@ const server = new ApolloServer({
 })
 
 server
-  .listen()
-  .then(({ url }) => console.log('Server is running on localhost:4000'))
+  .listen(PORT || 5000)
+  .then(({ url }) => console.log(`Server is running on ${url}`))
 
 
