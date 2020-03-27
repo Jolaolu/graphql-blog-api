@@ -30,7 +30,7 @@ const server = new ApolloServer({
 })
 
 server
-  .listen(PORT || 5000)
+  .listen(PORT || 4000)
   .then(({ url }) => console.log(`Server is running on ${url}`))
 
 
