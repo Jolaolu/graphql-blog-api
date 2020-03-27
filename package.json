@@ -7,7 +7,10 @@
   "scripts": {
     "migrate": " sequelize db:migrate",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server.js --exec babel-node -e js"
+    "dev": "nodemon src/server --exec babel-node -e js",
+    "build": "yarn run clean && babel src -d build",
+    "clean": "rimraf build",
+    "start": "node build/server"
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
@@ -19,6 +22,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
     "sequelize": "^5.21.5",
     "sequelize-cli": "^5.5.1",
     "sqlite3": "^4.1.1"
